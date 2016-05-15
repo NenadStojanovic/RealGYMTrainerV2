@@ -108,14 +108,25 @@
             android:layout_centerHorizontal="true"
             android:text="Semple Text" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textViewNames"
-            android:textColor="#ffffffff"
-            android:layout_marginTop="20dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/textViewNames"
+                android:textColor="#ffffffff"
+                android:layout_marginTop="20dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="23dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
