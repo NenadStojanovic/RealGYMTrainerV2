@@ -1,10 +1,12 @@
 package com.rgt.nenad.realgymtrainerv2;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -62,5 +64,22 @@ public class MainActivity extends AppCompatActivity {
         tv2.setText(nameIWant);
 
 
+    }
+
+
+    //funkcija za dugme za otvaranje treninga
+    public void openTrening(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), TreningActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    //funkcija za dugme za otvaranje profila
+    public void openProfil(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), ProfilActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

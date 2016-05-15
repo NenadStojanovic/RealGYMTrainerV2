@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".TreningActivity" >
         </activity>
+        <activity android:name=".ProfilActivity" >
+        </activity>
     </application>
 
 </manifest>
