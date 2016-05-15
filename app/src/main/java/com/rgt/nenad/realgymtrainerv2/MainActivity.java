@@ -20,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
                 "Fonts/veteran_typewriter.ttf");
         TextView tv = (TextView) findViewById(R.id.textViewQuotes);
         tv.setTypeface(tf);
-        tv.setText("It's simple. If it jiggles, it's \nFAT! \n   ...Arnold Schwarzenegger");
+        tv.setText("It's simple. If it jiggles, it's \nFAT! ");
+
+        TextView tv2 = (TextView) findViewById(R.id.textViewNames);
+        tv2.setTypeface(tf);
+        tv2.setText("...Arnold Schwarzenegger");
 
 
     }
