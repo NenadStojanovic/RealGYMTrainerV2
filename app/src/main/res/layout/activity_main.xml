@@ -105,7 +105,7 @@
             android:fontFamily="Veteran Typewriter Regular"
             android:textColor="#ffffffff"
             android:textAlignment="center"
-            android:textSize="30dp"
+            android:textSize="27dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="Semple Text"
@@ -127,7 +127,7 @@
                 android:layout_marginTop="20dp"
                 android:textAlignment="gravity"
                 android:gravity="right"
-                android:textSize="23dp"
+                android:textSize="21dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="15dp" />
         </LinearLayout>

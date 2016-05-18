@@ -31,8 +31,8 @@
                 android:layout_weight="0"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp">
 
                 <TextView
@@ -58,19 +58,14 @@
                     android:layout_weight="0"
                     android:cropToPadding="false"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:clickable="true"
-                    android:onClick="openEdit" />
+                    android:layout_marginLeft="30dp" />
 
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ImageLayout"
-                android:background="#7f737171"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
+                android:id="@+id/ImageLayout">
 
                 <ImageView
                     android:layout_width="384dp"
@@ -80,12 +75,13 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="50dp"
+                    android:background="#7f737171"
                     android:padding="5dp"
-                    android:layout_margin="5dp" />
+                    android:layout_margin="10dp" />
 
 
                 <RelativeLayout
-                    android:id="@+id/PrikazNoga"
+                    android:id="@+id/relativeLayout2"
                     android:layout_width="150dp"
                     android:layout_height="70dp"
                     android:orientation="horizontal"
@@ -93,9 +89,8 @@
                     android:layout_alignParentRight="false"
                     android:layout_alignParentEnd="false"
                     android:layout_alignLeft="@+id/imageViewBilder"
-                    android:layout_marginLeft="195dp"
-                    android:layout_marginTop="190dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="190dp" >
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -104,7 +99,7 @@
                         android:src="@drawable/pokazivac_sa_kockom" />
 
                     <TextView
-                        android:id="@+id/textViewNoga"
+                        android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="153"
@@ -121,9 +116,8 @@
                         android:layout_alignRight="@+id/imageView3" />
                 </RelativeLayout>
 
-
                 <RelativeLayout
-                    android:id="@+id/PrikazStruk"
+                    android:id="@+id/PrikazNoga"
                     android:layout_width="150dp"
                     android:layout_height="70dp"
                     android:orientation="horizontal"
@@ -131,47 +125,8 @@
                     android:layout_alignParentRight="false"
                     android:layout_alignParentEnd="false"
                     android:layout_alignLeft="@+id/imageViewBilder"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginRight="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageViewWaist"
-                        android:src="@drawable/pokazivac_sa_kockom_mirror_obrnuti" />
-
-                    <TextView
-                        android:id="@+id/textViewStruk"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="153"
-                        android:textSize="20dp"
-                        android:textColor="#ffffffff"
-                        android:textIsSelectable="false"
-                        android:layout_gravity="bottom"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="6dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignBottom="@+id/imageViewWaist"
-                        android:layout_alignRight="@+id/imageViewWaist"
-                        android:layout_alignLeft="@+id/imageViewWaist"
-                        android:layout_marginLeft="5dp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/PrikazGrudi"
-                    android:layout_width="150dp"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_alignTop="@+id/imageViewBilder"
-                    android:layout_alignParentRight="false"
-                    android:layout_alignParentEnd="false"
-                    android:layout_alignLeft="@+id/imageViewBilder"
-                    android:layout_marginLeft="180dp"
-                    android:layout_marginTop="75dp">
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="80dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -180,7 +135,7 @@
                         android:src="@drawable/pokazivac_sa_kockom" />
 
                     <TextView
-                        android:id="@+id/textViewGrudi"
+                        android:id="@+id/textViewNoga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="153"
@@ -198,127 +153,6 @@
 
                 </RelativeLayout>
 
-
-                <RelativeLayout
-                    android:id="@+id/PrikazRuke"
-                    android:layout_width="150dp"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_alignTop="@+id/imageViewBilder"
-                    android:layout_alignParentRight="false"
-                    android:layout_alignParentEnd="false"
-                    android:layout_alignLeft="@+id/imageViewBilder"
-                    android:layout_marginLeft="210dp"
-                    android:layout_marginTop="0dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageViewRuke"
-                        android:src="@drawable/pokazivac_sa_kockom_obrnuti" />
-
-                    <TextView
-                        android:id="@+id/textViewRuke"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="153"
-                        android:textSize="20dp"
-                        android:textColor="#ffffffff"
-                        android:textIsSelectable="false"
-                        android:layout_gravity="bottom"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="38dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignBottom="@+id/imageViewRuke"
-                        android:layout_alignRight="@+id/imageViewRuke" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:layout_alignLeft="@+id/imageViewBilder"
-                    android:layout_alignTop="@+id/imageViewBilder"
-                    android:layout_marginTop="230dp"
-                    android:layout_marginLeft="5dp"
-                    android:id="@+id/InfoLayout">
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="33dp"
-                        android:id="@+id/Heightlayout">
-
-                        <TextView
-                            android:layout_width="67dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Height:"
-                            android:id="@+id/textViewHeight"
-                            android:textColor="#ffffffff" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Val"
-                            android:id="@+id/textViewHeightValue"
-                            android:layout_marginLeft="2dp"
-                            android:textColor="#ffffffff" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="33dp"
-                        android:id="@+id/WeightLayout" >
-
-                        <TextView
-                            android:layout_width="67dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Weight:"
-                            android:id="@+id/textViewWeight"
-                            android:textColor="#ffffffff" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Val"
-                            android:id="@+id/textViewWeightVal"
-                            android:layout_marginLeft="2dp"
-                            android:textColor="#ffffffff" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="33dp"
-                        android:id="@+id/BMILayout" >
-
-                        <TextView
-                            android:layout_width="67dp"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="BMI:"
-                            android:id="@+id/textViewBMI"
-                            android:textColor="#ffffffff" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="Val"
-                            android:id="@+id/textViewBMIValue"
-                            android:layout_marginLeft="2dp"
-                            android:textColor="#ffffffff" />
-                    </LinearLayout>
-                </LinearLayout>
-
             </RelativeLayout>
 
             <LinearLayout
@@ -326,8 +160,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="#7f737171"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:baselineAligned="false"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp"

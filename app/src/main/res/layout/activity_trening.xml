@@ -8,4 +8,72 @@
     tools:context="com.rgt.nenad.realgymtrainerv2.TreningActivity"
     android:background="@drawable/pozadina3">
 
+    <ImageView
+        android:layout_width="192dp"
+        android:layout_height="320dp"
+        android:id="@+id/imageViewBilder"
+        android:src="@drawable/iseceni_cika"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="@drawable/pokazivac_sa_kockom"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/imageViewBilder"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignLeft="@+id/imageViewBilder"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="20dp"
+            android:textColor="#ffffffff"
+            android:textIsSelectable="false"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/PrikazNoga"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="@drawable/pokazivac_sa_kockom"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/imageViewBilder"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignLeft="@+id/imageViewBilder"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/textViewNoga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="20dp"
+            android:textColor="#ffffffff"
+            android:textIsSelectable="false"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
 </RelativeLayout>

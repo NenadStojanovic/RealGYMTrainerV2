@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rgt.nenad.realgymtrainerv2.EditActivity"
+    android:id="@+id/Container">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="470dp"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/VerticalLayout"
+        android:padding="10dp"
+        android:background="#7f737171">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Imelayout"
+            android:layout_marginTop="20dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Ime:"
+                android:id="@+id/textViewIme"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextIme"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Prezimelayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Prezime:"
+                android:id="@+id/textViewStruk"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextStruk"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Rukalayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Obim ruke:"
+                android:id="@+id/textViewRuka"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextRuka"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Grudilayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Obim grudi:"
+                android:id="@+id/textViewGrudi"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextGrudi"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Struklayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Obim struka:"
+                android:id="@+id/textViewPrezime"
+                android:layout_marginLeft="20dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextPrezime"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Nogalayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Obim noge:"
+                android:id="@+id/textViewNoga"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextNoga"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Visinalayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Visina:"
+                android:id="@+id/textViewVisina"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextVisina"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Tezinalayout"
+            android:layout_marginTop="5dp"
+            android:background="#7fff7600"
+            android:gravity="bottom|center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tezina:"
+                android:id="@+id/textViewTezina"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#ffffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextTezina"
+                android:layout_weight="1"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="#ffffff"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
