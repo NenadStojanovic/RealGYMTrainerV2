@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
 
 public class TreningActivity extends AppCompatActivity {
 
-    int LineCount1 = 5;
+    int LineCount1 = 10;
     String Naziv;
     String Opis;
 
@@ -74,7 +74,7 @@ public class TreningActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            parent.setTitle(i+"-"+Naziv);
+            parent.setTitle((i+1)+"-"+Naziv);
 
 
 
