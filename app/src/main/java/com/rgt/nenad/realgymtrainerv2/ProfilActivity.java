@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -15,7 +16,6 @@ public class ProfilActivity extends AppCompatActivity {
 
 
     TextView Ime;
-    TextView Prezime;
     TextView Visina;
     TextView Tezina;
     TextView BMI;
@@ -111,5 +111,63 @@ public class ProfilActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), EditActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+
+
+
+        //Hiding ActionBar
+        getSupportActionBar().hide();
+
+
+
+        DBMain db;
+        db = new DBMain(this);
+
+        try {
+
+            db.createDB();
+        } catch (IOException ioe) {
+
+            throw new Error("Database not created....");
+        }
+
+        try {
+            db.openDB();
+
+        }catch(Exception sqle){
+
+            throw sqle;
+        }
+
+        //Working datavase variable
+        SQLiteDatabase db1;
+        db1=openOrCreateDatabase("rgtbaza",SQLiteDatabase.CREATE_IF_NECESSARY,null);
+        //SQLiteDatabase db1 =  getWritableDatabase();
+        Cursor c= db1.rawQuery("SELECT * FROM " + "Profil" + " WHERE id = ?", new String[] {"1"});
+
+        try {
+            c.moveToFirst();
+            this.Ime.setText(c.getString(c.getColumnIndex("Ime")) + " " + c.getString(c.getColumnIndex("Prezime")) );
+            this.Visina.setText(c.getString(c.getColumnIndex("Visina")));
+            this.Tezina.setText(c.getString(7));
+            this.BMI.setText(c.getString(9));
+            this.Ruke.setText(c.getString(3));
+            this.Grudi.setText(c.getString(5));
+            this.Struk.setText(c.getString(4));
+            this.Noge.setText(c.getString(6));
+        }
+        catch (Exception e) {
+            e.getMessage();
+        }
+        db1.close();
+
+
+
     }
 }
