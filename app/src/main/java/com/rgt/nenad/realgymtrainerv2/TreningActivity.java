@@ -34,11 +34,11 @@ public class TreningActivity extends AppCompatActivity {
         for (int i = 0; i < 5; i++) {
             //for each "i" create a new Parent object to set the title and the children
             Parent parent = new Parent();
-            parent.setTitle("Vezba " + i);
+            parent.setTitle("Naziv vezbe " + i);
 
             arrayChildren = new ArrayList<String>();
             for (int j = 0; j < 1; j++) {
-                arrayChildren.add("Ovo je text za opis vezbe ");
+                arrayChildren.add("Ovo je neki random text iz txt fajla ");
             }
             parent.setArrayChildren(arrayChildren);
 
