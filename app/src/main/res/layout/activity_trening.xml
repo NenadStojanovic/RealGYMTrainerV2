@@ -4,53 +4,68 @@
     android:layout_height="match_parent"
     tools:context="com.rgt.nenad.realgymtrainerv2.TreningActivity"
     android:background="@drawable/pozadina3">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/WorkoutTypeLayout">
-
-        <TextView
+    <!--
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Workout Type:"
-            android:id="@+id/textViewWT" />
+            android:id="@+id/WorkoutTypeLayout">
 
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButtonCW"
-                android:text="Circuit Workout"
-                android:onClick="radioBtnClicked"
-                android:layout_marginTop="5dp"
-                android:textSize="20dp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Workout Type:"
+                android:textColor="#ffffff"
+                android:id="@+id/textViewWT" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButtonBW"
-                android:text="Beginner Workout"
-                android:onClick="radioBtnClicked"
-                android:layout_marginTop="5dp"
-                android:textSize="20dp" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButtonAW"
-                android:text="Advanced Workout"
-                android:onClick="radioBtnClicked"
-                android:layout_marginTop="5dp"
-                android:textSize="20dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonCW"
+                    android:text="Circuit Workout"
+                    android:onClick="radioBtnClicked"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp" />
 
-        </RadioGroup>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonBW"
+                    android:text="Beginner Workout"
+                    android:onClick="radioBtnClicked"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp" />
 
-    </LinearLayout>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonAW"
+                    android:text="Advanced Workout"
+                    android:textColor="#ffffff"
+                    android:onClick="radioBtnClicked"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp" />
 
-</RelativeLayout>
+            </RadioGroup>
+
+        </LinearLayout>
+        -->
+
+    <ExpandableListView android:id="@+id/expandable_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:transcriptMode="alwaysScroll"
+
+        android:background="@drawable/pozadina2"
+        android:listSelector="@android:color/transparent"/>
+
+
+    </RelativeLayout>

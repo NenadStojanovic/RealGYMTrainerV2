@@ -17,7 +17,7 @@
     </style>
 
     <style name="ChatBackground" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:windowBackground">@drawable/lockerroom</item>
+        <item name="android:windowBackground">@drawable/pozadina1</item>
     </style>
 
 </resources>
