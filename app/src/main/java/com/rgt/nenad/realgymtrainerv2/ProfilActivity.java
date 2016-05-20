@@ -25,7 +25,7 @@ public class ProfilActivity extends AppCompatActivity {
     TextView Noge;
 
 
-
+    //komentar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
