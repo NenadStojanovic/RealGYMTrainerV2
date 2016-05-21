@@ -49,8 +49,8 @@ public class TreningActivity extends AppCompatActivity {
         //OVO CITA TXT DATOTEKE ZA NAZIV I OPIS
         //PARENT
 
-        TextView papa = (TextView) findViewById(R.id.list_item_text_view);
-        TextView dete = (TextView) findViewById(R.id.list_item_text_child);
+        //TextView papa = (TextView) findViewById(R.id.list_item_text_view);
+        //TextView dete = (TextView) findViewById(R.id.list_item_text_child);
 
         int duz=LineCount1;
         int RandInd1;
@@ -75,7 +75,6 @@ public class TreningActivity extends AppCompatActivity {
                     BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
                     for(int j = 0; j < rand; ++j) {
                         br.readLine();
-
                         Opis = br.readLine();
                        /* if(Opis==null)
                         {
@@ -83,8 +82,6 @@ public class TreningActivity extends AppCompatActivity {
                             j=0;
                             br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
                         }*/
-
-
                     }
 
 
