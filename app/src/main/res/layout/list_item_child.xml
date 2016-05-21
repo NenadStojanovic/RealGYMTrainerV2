@@ -3,44 +3,170 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="464dp"
+    android:layout_height="wrap_content"
     android:id="@+id/list_item_child">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp">
 
-    <TextView android:layout_width="174dp"
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="348dp"
+                android:id="@+id/imageViewChild"
+
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/button"
+                android:src="@drawable/trbusnjaciposter" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="6dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center|start"
+                    android:id="@+id/FirstSetLaout">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="1st Set  15 Reps"
+                        android:id="@+id/textView6"
+                        android:textSize="18dp"
+                        android:textColor="#ffffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Val"
+                        android:id="@+id/FirstSetVal"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#ff7600" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center|start"
+                    android:id="@+id/SecondSetLaout"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="2nd Set  12 Reps"
+                        android:id="@+id/textView7"
+                        android:textSize="18dp"
+                        android:textColor="#ffffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Val"
+                        android:id="@+id/SecondSetVal"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#ff7600"
+                        android:textIsSelectable="false"
+                        android:layout_weight="4.78" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center|start"
+                    android:id="@+id/ThirdSetLaout">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="3rd Set  10 Reps"
+                        android:id="@+id/textView8"
+                        android:textSize="18dp"
+                        android:textColor="#ffffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Val"
+                        android:id="@+id/ThirdSetVal"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#ff7600" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center|start"
+                    android:id="@+id/FourthtSetLaout">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="4th Set   8 Reps"
+                        android:id="@+id/textView9"
+                        android:textSize="18dp"
+                        android:textColor="#ffffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Val"
+                        android:id="@+id/FourthSetVal"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#ff7600" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list_item_text_child"
         android:textSize="20sp"
         android:padding="10dp"
         android:textColor="#ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/imageView5" />
+      />
 
-    <ImageView
-        android:layout_width="212dp"
-        android:layout_height="464dp"
-        android:id="@+id/imageView5"
 
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/button" />
+    </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Video"
-        android:focusable="false"
-        android:layout_gravity="right"
-        android:textColor="#ffffff"
-        android:focusableInTouchMode="false"
-        android:id="@+id/button"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/list_item_text_child"
-        android:layout_alignEnd="@+id/list_item_text_child"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
+
+
+
+
+
+
 
 
 </RelativeLayout>
