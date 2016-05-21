@@ -59,22 +59,10 @@ public class TreningActivity extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             //for each "i" create a new Parent object to set the title and the children
             //Naziv
-            RandInd1=(int)Math.ceil(Math.random()*LineCount1);
+            RandInd1=(int)Math.ceil(Math.random()*(LineCount1-1));
             Parent parent = new Parent();
-            try {
 
-                BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("grudi.txt")));
-                for(int j = 0; j < RandInd1; ++j) {
-                   Naziv=br.readLine();
-                }
-
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            parent.setTitle((i+1)+"-"+Naziv);
+            parent.setTitle((i+1)+"-"+"Naziv");
 
 
 
@@ -83,11 +71,20 @@ public class TreningActivity extends AppCompatActivity {
             Child child=new Child();
             for (int l = 0; l < 1; ++l) {
                 try {
+                    int rand=RandInd1;
+                    BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
+                    for(int j = 0; j < rand; ++j) {
+                        br.readLine();
 
-                    BufferedReader br1 = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
-                    for(int m = 0; m < RandInd1; m++) {
-                        br1.readLine();
-                        Opis= br1.readLine();
+                        Opis = br.readLine();
+                       /* if(Opis==null)
+                        {
+                            rand=RandInd1;
+                            j=0;
+                            br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
+                        }*/
+
+
                     }
 
 

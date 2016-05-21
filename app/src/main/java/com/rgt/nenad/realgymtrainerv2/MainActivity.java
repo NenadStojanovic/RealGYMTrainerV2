@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
              lineIWant = br.readLine();
             nameIWant = br.readLine();
+           br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
