@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         tv2.setTypeface(tf);
 
         //selecting random quotes
-        int RandIndex=(int)Math.ceil(Math.random()*LineCount);
+        int RandIndex=(int)Math.ceil(Math.random()*(LineCount-1));
         if(RandIndex % 2 != 0)
         {
             RandIndex++;

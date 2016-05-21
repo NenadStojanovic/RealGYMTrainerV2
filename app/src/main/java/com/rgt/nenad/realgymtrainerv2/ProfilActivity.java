@@ -26,7 +26,7 @@ public class ProfilActivity extends AppCompatActivity {
     boolean napView = true;
 
 
-
+    //komentar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
