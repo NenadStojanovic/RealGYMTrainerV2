@@ -23,6 +23,7 @@ public class ProfilActivity extends AppCompatActivity {
     TextView Grudi;
     TextView Struk;
     TextView Noge;
+    boolean napView = true;
 
 
 
@@ -58,7 +59,9 @@ public class ProfilActivity extends AppCompatActivity {
         //Working datavase variable
         SQLiteDatabase db1;
         db1=openOrCreateDatabase("rgtbaza",SQLiteDatabase.CREATE_IF_NECESSARY,null);
+        db1.enableWriteAheadLogging();
         //SQLiteDatabase db1 =  getWritableDatabase();
+        try {
         Cursor c= db1.rawQuery("SELECT * FROM " + "Profil" + " WHERE id = ?", new String[] {"1"});
 
         this.Ime = (TextView) findViewById(R.id.textViewIme);
@@ -79,7 +82,7 @@ public class ProfilActivity extends AppCompatActivity {
         this.Struk.setText(db.vratiVrednost(4,this));
         this.Noge.setText(db.vratiVrednost(6,this));*/
 
-        try {
+
             c.moveToFirst();
             this.Ime.setText(c.getString(c.getColumnIndex("Ime")) + " " + c.getString(c.getColumnIndex("Prezime")));
             this.Visina.setText(c.getString(c.getColumnIndex("Visina")));
@@ -93,6 +96,7 @@ public class ProfilActivity extends AppCompatActivity {
         catch (Exception e) {
                 e.getMessage();
         }
+        db1.close();
 
 
 
@@ -151,23 +155,84 @@ public class ProfilActivity extends AppCompatActivity {
         //SQLiteDatabase db1 =  getWritableDatabase();
         Cursor c= db1.rawQuery("SELECT * FROM " + "Profil" + " WHERE id = ?", new String[] {"1"});
 
-        try {
-            c.moveToFirst();
-            this.Ime.setText(c.getString(c.getColumnIndex("Ime")) + " " + c.getString(c.getColumnIndex("Prezime")) );
-            this.Visina.setText(c.getString(c.getColumnIndex("Visina")));
-            this.Tezina.setText(c.getString(7));
-            this.BMI.setText(c.getString(9));
-            this.Ruke.setText(c.getString(3));
-            this.Grudi.setText(c.getString(5));
-            this.Struk.setText(c.getString(4));
-            this.Noge.setText(c.getString(6));
-        }
-        catch (Exception e) {
-            e.getMessage();
-        }
+            try {
+                c.moveToFirst();
+                this.Ime.setText(c.getString(c.getColumnIndex("Ime")) + " " + c.getString(c.getColumnIndex("Prezime")));
+                this.Visina.setText(c.getString(c.getColumnIndex("Visina")));
+                this.Tezina.setText(c.getString(7));
+                this.BMI.setText(c.getString(9));
+                this.Ruke.setText(c.getString(3));
+                this.Grudi.setText(c.getString(5));
+                this.Struk.setText(c.getString(4));
+                this.Noge.setText(c.getString(6));
+            }
+            catch (Exception e) {
+                e.getMessage();
+
+            }
+
         db1.close();
 
 
 
     }
+
+    public void clickProgress(View view){
+
+        DBMain db;
+        db = new DBMain(this);
+
+        try {
+
+            db.createDB();
+        } catch (IOException ioe) {
+
+            throw new Error("Database not created....");
+        }
+
+        try {
+            db.openDB();
+
+        }catch(Exception sqle){
+
+            throw sqle;
+        }
+
+        //Working datavase variable
+        SQLiteDatabase db1;
+        db1=openOrCreateDatabase("rgtbaza",SQLiteDatabase.CREATE_IF_NECESSARY,null);
+        //SQLiteDatabase db1 =  getWritableDatabase();
+        Cursor c= db1.rawQuery("SELECT * FROM " + "Profil" + " WHERE id = ?", new String[] {"1"});
+        if(this.napView) {
+            this.napView = false;
+            try {
+                c.moveToFirst();
+
+                this.Visina.setText(c.getString(c.getColumnIndex("NapVisina")));
+                this.Tezina.setText(c.getString(c.getColumnIndex("NapTezina")));
+                this.BMI.setText(c.getString(c.getColumnIndex("NapBMI")));
+                this.Ruke.setText(c.getString(c.getColumnIndex("NapRuke")));
+                this.Grudi.setText(c.getString(c.getColumnIndex("NapGrudi")));
+                this.Struk.setText(c.getString(c.getColumnIndex("NapStruka")));
+                this.Noge.setText(c.getString(c.getColumnIndex("NapNoge")));
+            } catch (Exception e) {
+                e.getMessage();
+            }
+        }
+
+        else{
+                this.napView = true;
+                c.moveToFirst();
+
+                this.Visina.setText(c.getString(c.getColumnIndex("Visina")));
+                this.Tezina.setText(c.getString(7));
+                this.BMI.setText(c.getString(9));
+                this.Ruke.setText(c.getString(3));
+                this.Grudi.setText(c.getString(5));
+                this.Struk.setText(c.getString(4));
+                this.Noge.setText(c.getString(6));
+            }
+            db1.close();
+
+        }
 }
