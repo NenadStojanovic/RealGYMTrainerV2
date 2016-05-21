@@ -72,10 +72,10 @@ public class TreningActivity extends AppCompatActivity {
             for (int l = 0; l < 1; ++l) {
                 try {
                     int rand=RandInd1;
-                    BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
+                    BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("grudiopisvezbi.txt")));
                     for(int j = 0; j < rand; ++j) {
                         br.readLine();
-                        Opis = br.readLine();
+
                        /* if(Opis==null)
                         {
                             rand=RandInd1;
@@ -83,6 +83,8 @@ public class TreningActivity extends AppCompatActivity {
                             br = new BufferedReader(new InputStreamReader(getAssets().open("grudiOpisVezbi.txt")));
                         }*/
                     }
+
+                    Opis = br.readLine();
 
 
                 } catch (FileNotFoundException e) {
