@@ -1,6 +1,7 @@
 package com.rgt.nenad.realgymtrainerv2;
 
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -19,9 +20,10 @@ public class DBMain extends SQLiteOpenHelper {
     private static String TABLE_Name = "Profil";
     private SQLiteDatabase dbObj;
     private final Context context;
+    DBMain db;
 
     public DBMain(Context context) {
-        super(context,  DB_NAME , null, 3);
+        super(context,  DB_NAME , null, 1);
         this.context  = context;
     }
 
@@ -198,6 +200,29 @@ public class DBMain extends SQLiteOpenHelper {
             e.getMessage();
         }
         return dbString;
+
+    }
+
+    public void updateProf(Profil p, Context c)
+    {
+
+
+
+
+        try {
+            SQLiteDatabase db1 = getWritableDatabase();
+
+            ContentValues cv = new ContentValues();
+            cv.put("Ime", p.getIme());
+            cv.put("Prezime", p.getPrezime());
+            int pom = db1.update("Profil", cv, "ID = ? ", new String[]{"1"});
+            //db1.execSQL("UPDATE Profil SET Ime=Proba WHERE ID=1");
+            db1.close();
+        }
+        catch (SQLException e)
+        {
+            e.getMessage();
+        }
 
     }
 }
