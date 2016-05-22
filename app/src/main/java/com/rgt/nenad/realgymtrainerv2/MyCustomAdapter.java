@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -94,8 +95,39 @@ public class MyCustomAdapter extends BaseExpandableListAdapter {
             view = inflater.inflate(R.layout.list_item_child, viewGroup,false);
         }
 
-        TextView textView = (TextView) view.findViewById(R.id.list_item_text_child);
-        textView.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getTitle());
+        TextView textView1 = (TextView) view.findViewById(R.id.list_item_text_child);
+        textView1.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getTitle());
+
+        TextView textView2 = (TextView) view.findViewById(R.id.FirstSetVal);
+        textView2.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getFirstSet());
+
+        TextView textView3 = (TextView) view.findViewById(R.id.SecondSetVal);
+        textView3.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getSecondSet());
+
+        TextView textView4 = (TextView) view.findViewById(R.id.ThirdSetVal);
+        textView4.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getThirdSet());
+
+        TextView textView5 = (TextView) view.findViewById(R.id.FourthSetVal);
+        textView5.setText(mParent.get(groupPosition).getArrayChildren().get(childPosition).getFourthSet());
+
+        String pomStr = mParent.get(groupPosition).getArrayChildren().get(childPosition).getSlikaLink();
+
+        ImageView ImageView6 = (ImageView) view.findViewById(R.id.imageViewChild);
+        if(pomStr == "Grudi")
+            ImageView6.setImageResource(R.drawable.grudiposter);
+        else if(pomStr.equals("Ruke"))
+            ImageView6.setImageResource(R.drawable.rukeposter);
+        else if(pomStr.equals("Noge"))
+            ImageView6.setImageResource(R.drawable.nogeposter);
+        else if(pomStr.equals("Ramena"))
+            ImageView6.setImageResource(R.drawable.ramenaposter);
+        else if(pomStr.equals("Trbusnjaci"))
+            ImageView6.setImageResource(R.drawable.trbusnjaciposter);
+        else if(pomStr.equals("Triceps"))
+            ImageView6.setImageResource(R.drawable.tricepsposter);
+        else if(pomStr.equals("Ledja"))
+            ImageView6.setImageResource(R.drawable.ledjaposter);
+
 
         view.setTag(holder);
 
