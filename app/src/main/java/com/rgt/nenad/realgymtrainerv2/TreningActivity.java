@@ -14,11 +14,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-
-
-
-
+import java.util.List;
 
 
 public class TreningActivity extends AppCompatActivity {
@@ -145,6 +141,8 @@ public class TreningActivity extends AppCompatActivity {
             if(brTreninga.equals("3"))
             {
 
+                List<Integer> pomNiz = new ArrayList<Integer>();
+
 
 
                 for (int i = 0; i < 4; i++)
@@ -154,12 +152,18 @@ public class TreningActivity extends AppCompatActivity {
                         int RandInd1;
                         int LineNumber;
                         //for each "i" create a new Parent object to set the title and the children
-                        //Naziv
+
+                        do {
+
+
                         int val = c1.getCount();
                         double val2 = Math.random() * c1.getCount();
                         RandInd1 = (int) Math.ceil(val2 - 1);
                         if(RandInd1 == 0)
                             RandInd1 = 1;
+                        }
+                        while(pomNiz.contains(RandInd1));
+                        pomNiz.add(RandInd1);
                         Parent parent = new Parent();
                         for (int j = 0; j < RandInd1; j++) {
                             c1.moveToNext();
@@ -212,6 +216,7 @@ public class TreningActivity extends AppCompatActivity {
                         arrayParents.add(parent);
                     }
 
+                List<Integer> pomNiz1 = new ArrayList<Integer>();
                 for(int i=0;i<4;i++)
                 {
                     Cursor c1 = db1.rawQuery("SELECT * FROM " + "Trening" + " WHERE TIP_VEZBE = ? ", new String[]{"Biceps"});
@@ -220,11 +225,17 @@ public class TreningActivity extends AppCompatActivity {
                     int LineNumber;
                     //for each "i" create a new Parent object to set the title and the children
                     //Naziv
-                    int val = c1.getCount();
-                    double val2 = Math.random() * c1.getCount();
-                    RandInd1 = (int) Math.ceil(val2 - 1);
-                    if(RandInd1 == 0)
-                        RandInd1 = 1;
+                    do {
+
+
+                        int val = c1.getCount();
+                        double val2 = Math.random() * c1.getCount();
+                        RandInd1 = (int) Math.ceil(val2 - 1);
+                        if(RandInd1 == 0)
+                            RandInd1 = 1;
+                    }
+                    while(pomNiz1.contains(RandInd1));
+                    pomNiz1.add(RandInd1);
                     Parent parent = new Parent();
                     for (int j = 0; j < RandInd1; j++) {
                         c1.moveToNext();
@@ -286,6 +297,19 @@ public class TreningActivity extends AppCompatActivity {
             e.getMessage();
         }
         mExpandableList.setAdapter(new MyCustomAdapter(TreningActivity.this, arrayParents));
+    }
+
+    public boolean CheckValue(int[] niz, int val){
+        int p=0;
+        for(int i=0;i<niz.length;i++) {
+            if (niz[i] == val)
+                p++;
+
+        }
+        if(p==0)
+            return true;
+        else
+            return false;
     }
 
 }

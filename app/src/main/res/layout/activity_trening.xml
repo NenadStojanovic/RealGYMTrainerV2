@@ -64,7 +64,6 @@
         android:layout_height="fill_parent"
         android:transcriptMode="alwaysScroll"
 
-        android:background="@drawable/pozadina2"
         android:listSelector="@android:color/transparent"/>
 
 

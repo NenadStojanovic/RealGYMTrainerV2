@@ -113,7 +113,7 @@ public class MyCustomAdapter extends BaseExpandableListAdapter {
         String pomStr = mParent.get(groupPosition).getArrayChildren().get(childPosition).getSlikaLink();
 
         ImageView ImageView6 = (ImageView) view.findViewById(R.id.imageViewChild);
-        if(pomStr == "Grudi")
+        /*if(pomStr == "Grudi")
             ImageView6.setImageResource(R.drawable.grudiposter);
         else if(pomStr.equals("Ruke"))
             ImageView6.setImageResource(R.drawable.rukeposter);
@@ -126,7 +126,7 @@ public class MyCustomAdapter extends BaseExpandableListAdapter {
         else if(pomStr.equals("Triceps"))
             ImageView6.setImageResource(R.drawable.tricepsposter);
         else if(pomStr.equals("Ledja"))
-            ImageView6.setImageResource(R.drawable.ledjaposter);
+            ImageView6.setImageResource(R.drawable.ledjaposter);*/
 
 
         view.setTag(holder);
