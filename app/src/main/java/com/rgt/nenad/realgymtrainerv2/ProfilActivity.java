@@ -106,6 +106,8 @@ public class ProfilActivity extends AppCompatActivity {
     //override BackButtonTransition
     public void onBackPressed() {
         super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
@@ -114,7 +116,13 @@ public class ProfilActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(getApplicationContext(), EditActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+    }
+    public void openSettings(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
     }
 
     @Override
@@ -172,6 +180,7 @@ public class ProfilActivity extends AppCompatActivity {
             }
 
         db1.close();
+        db.close();
 
 
 
@@ -233,6 +242,13 @@ public class ProfilActivity extends AppCompatActivity {
                 this.Noge.setText(c.getString(6));
             }
             db1.close();
+            db.close();
 
         }
+    public void openAchievements(View view){
+        Intent intent = new Intent(getApplicationContext(), AchievmentsActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_down);
+
+    }
 }

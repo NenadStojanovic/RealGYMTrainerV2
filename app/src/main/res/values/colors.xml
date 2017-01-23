@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#ff7600</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="DarkBackground">#6e000000</color>
+    <color name="NarandzastoProzirna">#7fff7600</color>
+    <color name="FontGreen">#33cc00</color>
+    <color name="FontYellow">#ffdb4d</color>
+    <color name="AchievementOrange">#afff7600</color>
 </resources>

@@ -13,6 +13,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBMain extends SQLiteOpenHelper {
     private static String DB_PATH= "data/data/com.rgt.nenad.realgymtrainerv2/databases/";
@@ -23,14 +26,21 @@ public class DBMain extends SQLiteOpenHelper {
     DBMain db;
 
     public DBMain(Context context) {
-        super(context,  DB_NAME , null, 1);
+        super(context, DB_NAME, null, 1);
         this.context  = context;
     }
 
     public void createDB() throws IOException {
 
+        boolean dbExist = checkDB();
+        if(dbExist){
+            //DO NOTHING!!!!
+        }
+        else{
+
+
         this.getReadableDatabase();
-        Log.i("Readable ends","end");
+        Log.i("Readable ends", "end");
 
         try {
             copyDB();
@@ -39,6 +49,7 @@ public class DBMain extends SQLiteOpenHelper {
         } catch (IOException e) {
 
             throw new Error("Error copying database");
+        }
         }
     }
 
@@ -54,26 +65,8 @@ public class DBMain extends SQLiteOpenHelper {
             Log.i("myPath ......",path);
             if (checkDB!=null)
             {
-                Cursor c= checkDB.rawQuery("SELECT * FROM Profil", null);
-                Log.i("Cursor.......",c.getString(0));
-                c.moveToFirst();
-                String contents[]=new String[80];
-                int flag=0;
 
-                while(! c.isAfterLast())
-                {
-                    String temp="";
-                    String s2=c.getString(0);
-                    String s3=c.getString(1);
-                    String s4=c.getString(2);
-                    temp=temp+"\n Id:"+s2+"\tType:"+s3+"\tBal:"+s4;
-                    contents[flag]=temp;
-                    flag=flag+1;
-
-                    Log.i("DB values.........",temp);
-                    c.moveToNext();
-
-                }
+            checkDB.close();
             }
             else
             {
@@ -119,7 +112,7 @@ public class DBMain extends SQLiteOpenHelper {
 
         String myPath = DB_PATH + DB_NAME;
         dbObj = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
-        Log.i("open DB......",dbObj.toString());
+        Log.i("open DB......", dbObj.toString());
     }
 
     @Override
@@ -141,88 +134,38 @@ public class DBMain extends SQLiteOpenHelper {
 
     }
 
-    public String vratiIme () {
-        String dbString = "";
-
+    public ArrayList<Achievement> LoadLockedAchievements(Context context){
+        ArrayList<Achievement> dostignuca = new ArrayList<>();
         try {
 
-            SQLiteDatabase db =  getWritableDatabase();
-            String query = "SELECT * FROM " + TABLE_Name + " WHERE 1";
-            Cursor c = db.rawQuery(query, null);
-            //Move to first row in your result
+
+            SQLiteDatabase db1;
+            db1 = context.openOrCreateDatabase("rgtbaza", SQLiteDatabase.CREATE_IF_NECESSARY, null);
+            boolean pom2 = db1.enableWriteAheadLogging();
+
+            Cursor c = db1.rawQuery("SELECT * FROM Dostignuca WHERE active=0",null);
+
+
             c.moveToFirst();
-            dbString += c.getString(1);
-            db.close();
 
-        }
-        catch (Exception e)
-        {
-            e.getMessage();
-        }
-        return dbString;
+            while (c.isAfterLast() == false) {
+                Achievement a = new Achievement(c.getString(c.getColumnIndex("type")),c.getString(c.getColumnIndex("name")), c.getString(c.getColumnIndex("active")), c.getString(c.getColumnIndex("value")), c.getString(c.getColumnIndex("ID")));
+                dostignuca.add(a);
 
-    }
-
-    public String vratiVrednost(int ind,Context c)
-    {
-        String dbString = "";
-        DBMain db;
-        db = new DBMain(c);
-
-        try {
-
-            db.createDB();
-        } catch (IOException ioe) {
-
-            throw new Error("Database not created....");
-        }
-
-        try {
-            db.openDB();
-
-        }catch(Exception sqle){
-
-            throw sqle;
-        }
-        try {
-
-            SQLiteDatabase db1 =  getWritableDatabase();
-            //String query = "SELECT * FROM " + TABLE_Name + " WHERE id = ?";
-            Cursor c1 = db1.rawQuery("SELECT * FROM " + TABLE_Name + " WHERE id = ?", new String[] {"1"});
-            //Move to first row in your result
-            c1.moveToFirst();
-            dbString += c1.getString(ind);
-            db1.close();
-
-        }
-        catch (Exception e)
-        {
-            e.getMessage();
-        }
-        return dbString;
-
-    }
-
-    public void updateProf(Profil p, Context c)
-    {
-
-
-
-
-        try {
-            SQLiteDatabase db1 = getWritableDatabase();
-
-            ContentValues cv = new ContentValues();
-            cv.put("Ime", p.getIme());
-            cv.put("Prezime", p.getPrezime());
-            int pom = db1.update("Profil", cv, "ID = ? ", new String[]{"1"});
-            //db1.execSQL("UPDATE Profil SET Ime=Proba WHERE ID=1");
+                c.moveToNext();
+            }
             db1.close();
         }
-        catch (SQLException e)
-        {
+        catch (SQLException e){
             e.getMessage();
         }
 
+        return dostignuca;
+
     }
+
+
+
+
+
 }

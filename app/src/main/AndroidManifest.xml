@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -31,8 +33,28 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait" >
         </activity>
-        <activity android:name=".EditActivity"
-            android:theme="@style/ChatBackground">
+        <activity
+            android:name=".EditActivity"
+            android:theme="@style/ChatBackground" >
+        </activity>
+        <activity
+            android:name=".ActiveTrainingActivity"
+            android:theme="@style/TrainingActivityTheme" >
+        </activity>
+        <activity
+            android:name=".PopUpActivity"
+            android:theme="@style/AppTheme.PopUpTheme" >
+        </activity>
+        <activity
+            android:name=".StartPopUpScreen"
+            android:theme="@style/AppTheme.PopUpTheme" >
+        </activity>
+        <activity android:name=".AchievmentsActivity" >
+        </activity>
+        <activity android:name=".SettingsActivity" >
+        </activity>
+        <activity android:name=".AddNewActivity"
+            android:theme="@style/AddNewExercise">
         </activity>
     </application>
 

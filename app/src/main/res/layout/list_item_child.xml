@@ -25,8 +25,7 @@
                 android:id="@+id/imageViewChild"
 
                 android:layout_alignParentTop="true"
-                android:layout_above="@+id/button"
-                android:src="@drawable/trbusnjaciposter" />
+                android:layout_above="@+id/button" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -57,7 +56,7 @@
                         android:text="Val"
                         android:id="@+id/FirstSetVal"
                         android:textSize="18dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#ff7600" />
                 </LinearLayout>
 
@@ -85,7 +84,7 @@
                         android:text="Val"
                         android:id="@+id/SecondSetVal"
                         android:textSize="18dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#ff7600"
                         android:textIsSelectable="false"
                         android:layout_weight="4.78" />
@@ -114,7 +113,7 @@
                         android:text="Val"
                         android:id="@+id/ThirdSetVal"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#ff7600" />
                 </LinearLayout>
 
@@ -141,7 +140,7 @@
                         android:text="Val"
                         android:id="@+id/FourthSetVal"
                         android:textSize="20dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#ff7600" />
                 </LinearLayout>
 
@@ -157,7 +156,40 @@
         android:padding="10dp"
         android:textColor="#ffffff"
       />
+        <LinearLayout
+            android:id="@+id/VideoBtnLayout"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/new_button2"
+            android:clickable="true"
+            android:orientation="horizontal"
 
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_weight="0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:text="VIDEO"
+                android:textSize="21sp"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
 
     </LinearLayout>
 

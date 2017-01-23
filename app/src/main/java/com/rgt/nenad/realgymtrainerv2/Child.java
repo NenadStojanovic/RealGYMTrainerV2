@@ -13,6 +13,15 @@ public class Child {
     private String thirdSet;
     private String fourthSet;
     private String slikaLink;
+    private int brURL;
+
+    public int getBrURL() {
+        return brURL;
+    }
+
+    public void setBrURL(int brURL) {
+        this.brURL = brURL;
+    }
 
     public void setSlikaLink(String slikaLink) {
         this.slikaLink = slikaLink;

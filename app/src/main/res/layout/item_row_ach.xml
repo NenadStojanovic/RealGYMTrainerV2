@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6e000000"
+        android:paddingLeft="5dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:id="@+id/parentLayout">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageViewAchievement"
+            android:src="@drawable/achiventribbongreen"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="You lifted whole ton of weight"
+            android:id="@+id/textViewMessage"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+</RelativeLayout>

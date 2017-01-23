@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rgt.nenad.realgymtrainerv2.ActiveTrainingActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/GlavniLayout"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/textViewTime"
+            android:layout_gravity="center"
+            android:textSize="60dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ff7600"
+            android:textAlignment="center"
+            android:background="#be000000" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="384dp"
+            android:id="@+id/listView"
+            android:padding="5dp"
+            android:focusable="true"
+            android:layout_weight="0.58">
+
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/new_button2"
+            android:clickable="true"
+            android:onClick="FinnishBtn"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:text="FINISH"
+                android:textSize="25dp"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

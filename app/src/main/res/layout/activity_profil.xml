@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
 
     tools:context="com.rgt.nenad.realgymtrainerv2.ProfilActivity"
-    android:background="@drawable/pozadina1">
+    android:background="@drawable/profil_bg">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -27,13 +27,28 @@
                 android:layout_height="60dp"
                 android:id="@+id/ImePrezimeLayout"
                 android:weightSum="1"
-                android:background="#6e000000"
+                android:background="#7fff7600"
                 android:layout_weight="0"
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/linearLayoutSettings"
+                    android:background="@drawable/new_button_settings"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:cropToPadding="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:clickable="true"
+                    android:onClick="openSettings" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -44,21 +59,22 @@
                     android:textColor="#ffffffff"
                     android:textSize="25sp"
                     android:gravity="center"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="0"
                     android:textColorHighlight="#ffffffff" />
 
-                <ImageView
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:id="@+id/imageViewEditIcon"
-                    android:src="@drawable/white_edit_icon"
-                    android:layout_marginRight="10dp"
+                    android:background="@drawable/new_button_edit"
+                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="0"
                     android:cropToPadding="false"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="20dp"
                     android:clickable="true"
                     android:onClick="openEdit" />
 
@@ -245,7 +261,6 @@
                     android:layout_marginTop="230dp"
                     android:padding="3dp"
                     android:background="#7fff7600"
-                    android:layout_marginLeft="5dp"
                     android:id="@+id/InfoLayout">
 
                     <LinearLayout
@@ -376,6 +391,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/new_button2"
                     android:clickable="true"
+                    android:onClick="openAchievements"
                     android:orientation="horizontal"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"

@@ -18,8 +18,7 @@
         android:textSize="20sp"
         android:padding="10dp"
         android:layout_weight="1"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="10dp" />
+        android:textColor="#ffffff" />
 
 
 

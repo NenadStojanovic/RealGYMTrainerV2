@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">RealGYMTrainerV2</string>
+    <string name="app_name">Real GYM Trainer</string>
+    <string name="exit_press_back_twice_message">Press Back again to exit</string>
+    <string name="good_job">Good job!</string>
+    <string name="good_job_long">You did great! It seems that this training intensity is challenging enough for you. Just keep going!</string>
+    <string name="excellent">Excellent!</string>
+    <string name="excellent_logng">You set a high bar with this one! I will increase your weights to make training more challenging!</string>
+    <string name="Dont_worry">Don\'t worry!</string>
+    <string name="Dont_worry_long">Don\'t be dosappointed. Next time i will lightly decrease the weights to improve your performance</string>
+    <string name="Start_Note">Hi, I am Real Gym Trainer and I will be your personal gym assistant. My goal is to maximize your training performances and to encourage you for higher goals and achievements, but to do that, I\'ll need some info of you, so first, let\'s create your profile.</string>
+
 </resources>

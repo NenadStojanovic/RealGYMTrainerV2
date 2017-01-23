@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.rgt.nenad.realgymtrainerv2.TreningActivity"
-    android:background="@drawable/pozadina3">
+    android:background="@drawable/trening_bg">
     <!--
         <LinearLayout
             android:orientation="vertical"
@@ -59,12 +59,73 @@
         </LinearLayout>
         -->
 
-    <ExpandableListView android:id="@+id/expandable_list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:transcriptMode="alwaysScroll"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
-        android:listSelector="@android:color/transparent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Your training for today"
+            android:id="@+id/textView36"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ff7600"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:background="#6e000000"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:autoText="false" />
+
+        <ExpandableListView android:id="@+id/expandable_list"
+            android:layout_width="fill_parent"
+            android:layout_height="400dp"
+            android:transcriptMode="alwaysScroll"
+
+            android:listSelector="@android:color/transparent"
+            android:layout_marginTop="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/buttonProfil"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/new_button2"
+                android:clickable="true"
+                android:onClick="startTraining"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:text="START"
+                    android:textSize="25dp"
+                    android:textColor="#ffffffff" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
 
 
-    </RelativeLayout>
+</RelativeLayout>
